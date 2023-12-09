@@ -1,0 +1,242 @@
+*{box-sizing: border-box;}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    user-select: none;
+}
+
+#containerHud {
+    display: none;
+    position: absolute;
+    bottom: 0.25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    height: 6.25vh;
+
+}
+
+.icon {
+    position: relative;
+    height: calc(100% - 2vh);
+    aspect-ratio: 1/1;
+    margin: 1vh;
+    margin-left: 0;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#icon_armour, #icon_heart, #icon_thirst, #icon_voice, #icon_hunger{
+    position: relative;
+    height: calc(100% - 2vh);
+    aspect-ratio: 1/1;
+    margin: 1vh;
+    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+#icon_dead{
+    display: none;
+    position: relative;
+    height: calc(100% - 2vh);
+    aspect-ratio: 1/1;
+    margin: 1vh;
+    margin-left: 0;
+    background-color: rgba(255, 0, 0, 1);
+    border: 0.2rem inset rgb(255, 255, 255);
+    border-radius: 0.4rem;
+}
+
+
+.icon_value{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.icon_shape {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 2.5vh;
+}
+
+
+
+/* car hud */
+
+
+#containerCarHud {
+    position: absolute;
+    top: 82%;
+    left: 1.5%;
+    transform: translate(-1.5%, 82%);
+}
+
+#location {
+    position: absolute;
+    width: 15vw;
+    height: 4vh;
+    background-color: rgba(0, 0, 0, 0.696);
+    border-radius: 0.2rem;
+}
+
+#location_value {
+    font-size: 1.5vh;
+    white-space: nowrap;
+}
+
+.location_value_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vh;
+    font-weight: 900;
+    color: white;
+}
+
+#informBar{
+    position: absolute;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.70);
+}
+
+
+/* Settings */
+
+#containerSettings{
+    pointer-events: all;
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    height: 50vh;
+    width: 50vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 4.3px 6px rgba(0, 255, 238, 0.6);
+}
+
+#containerSettings h2{
+    position: absolute;
+    color:  white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#changeColor{
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: rgba(0, 255, 238, 14%);
+    border-radius: 0.5rem;
+}
+
+.textChange{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+#changeColor input{
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(-95%, -50%);
+    margin:0;
+    padding:0;
+    border:0;
+    background: none;
+}
+#changeColor input::-webkit-color-swatch-wrapper {
+    border-radius: 0.5rem;
+	padding: 0;
+    margin:0;
+    background:none;
+}
+#changeColor input::-webkit-color-swatch {
+    border-radius: 0.5rem;
+	border: 3px solid black;
+    background:none;
+}
+
+#changePosition{
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 255, 238, 14%);
+    border-radius: 0.5rem;
+}
+
+.choose{
+    position: absolute;
+    top: 50%;
+    left: 97%;
+    transform: translate(-97%, -50%);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+#changePositionCar{
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 255, 238, 14%);
+    border-radius: 0.5rem;
+}
+
+#save{
+    position: absolute;
+    top: 95%;
+    left: 20%;
+    transform: translate(-20%, -95%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: linear 0.2s ;
+}
+
+#save:hover{
+    color: rgb(0, 197, 0);
+}
+
+#quitSettings{
+    position: absolute;
+    top: 95%;
+    left: 70%;
+    transform: translate(-20%, -95%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: linear 0.2s ;
+}
+
+#quitSettings:hover{
+    color: rgb(197, 0, 0);
+}
